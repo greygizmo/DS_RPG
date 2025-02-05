@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'DassaultBold';
+    src: url('./fonts/3ds Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'DassaultBoldItalic';
+    src: url('./fonts/3ds Bold Italic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: 'DassaultItalic';
+    src: url('./fonts/3ds Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: 'DassaultLight';
+    src: url('./fonts/3ds Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'DassaultRegular';
+    src: url('./fonts/3ds Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  

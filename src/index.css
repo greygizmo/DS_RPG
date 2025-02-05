@@ -1,0 +1,57 @@
+@import './fonts.css';
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #0072C6, #004B87); /* DS-style blue */
+  font-family: 'DassaultRegular', Arial, sans-serif;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.screen {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+}
+
+button {
+  cursor: pointer;
+  background: #ffffff;
+  color: #004B87;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background 0.3s ease;
+  font-family: 'DassaultBold', Arial, sans-serif;
+}
+
+button:hover {
+  background: #e0e0e0;
+}
+
+.option {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  margin: 15px auto;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid transparent;
+  max-width: 600px;
+  font-family: 'DassaultRegular', Arial, sans-serif;
+}
+
+.option:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border-color: #ffffff;
+}

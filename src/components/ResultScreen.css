@@ -1,0 +1,54 @@
+.result-screen {
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin-top: 20px;
+    font-family: 'DassaultRegular', Arial, sans-serif;
+  }
+  
+  .role-spotlight {
+    background: #ffffff;
+    color: #004B87; /* DS dark blue */
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .role-title {
+    font-family: 'DassaultBold', Arial, sans-serif;
+    font-size: 2.8em;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .role-description {
+    font-size: 1.2em;
+    line-height: 1.5;
+    font-family: 'DassaultLight', Arial, sans-serif;
+  }
+  
+  .narrative {
+    font-size: 1.1em;
+    margin: 20px 0;
+  }
+  
+  .narrative .role-name {
+    font-family: 'DassaultBoldItalic', Arial, sans-serif;
+    font-size: 1.6em;
+    color: #ffffff;
+    background: #0072C6;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  .recap h4 {
+    margin-bottom: 10px;
+  }
+  
+  .recap ul {
+    text-align: left;
+    margin: 0 auto;
+    display: inline-block;
+    font-size: 1em;
+  }
+  
