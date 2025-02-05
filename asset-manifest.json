@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/DS_RPG/static/css/main.3fe6788c.css",
+    "main.js": "/DS_RPG/static/js/main.62260b23.js",
+    "static/media/3ds Italic.ttf": "/DS_RPG/static/media/3ds Italic.24d08778cde449b3f926.ttf",
+    "static/media/3ds Bold Italic.ttf": "/DS_RPG/static/media/3ds Bold Italic.86000f71dbf8595bbb5c.ttf",
+    "static/media/3ds Regular.ttf": "/DS_RPG/static/media/3ds Regular.b15e29b2272027136b1c.ttf",
+    "static/media/3ds Bold.ttf": "/DS_RPG/static/media/3ds Bold.c7233facf40a1570f89f.ttf",
+    "static/media/3ds Light.otf": "/DS_RPG/static/media/3ds Light.a0fce7451ff1c45564a6.otf",
+    "index.html": "/DS_RPG/index.html",
+    "main.3fe6788c.css.map": "/DS_RPG/static/css/main.3fe6788c.css.map",
+    "main.62260b23.js.map": "/DS_RPG/static/js/main.62260b23.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3fe6788c.css",
+    "static/js/main.62260b23.js"
+  ]
+}
