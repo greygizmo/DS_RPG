@@ -3,7 +3,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: linear-gradient(135deg, #0072C6, #004B87); /* DS-style blue */
+  background: linear-gradient(135deg, #0072C6, #004B87); /* Dassault Systèmes style blue */
   font-family: 'DassaultRegular', Arial, sans-serif;
   color: #ffffff;
   display: flex;

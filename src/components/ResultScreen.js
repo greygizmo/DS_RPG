@@ -1,30 +1,29 @@
 import React from 'react';
+import rolesData from '../data/rolesData';
 import './ResultScreen.css';
 
 const ResultScreen = ({ selections, onRestart }) => {
   const { motivation, workPreference, challenge } = selections;
 
-  let recommendedRole = '';
-  let roleDescription = '';
+  // Map motivation to a set of categories
+  const motivationMapping = {
+    'Creative Expression': ['Design', 'Immersive'],
+    'Analytical Rigor': ['Simulation', 'Analytics'],
+    'Efficiency & Order': ['Manufacturing', 'Management'],
+    'Collaboration & Teamwork': ['Collaboration', 'Planning', 'Innovation', 'Industry Planning']
+  };
 
-  if (motivation === 'Creative Expression') {
-    recommendedRole = workPreference === 'Solo Explorer' ? '3D Creator' : 'Collaborative Conductor';
-    roleDescription = recommendedRole === '3D Creator'
-      ? "As a 3D Creator, you'll transform raw ideas into breathtaking digital masterpieces using state-of-the-art CAD tools like CATIA and SOLIDWORKS. Your creative vision will drive innovation in every project you undertake."
-      : "As a Collaborative Conductor, you lead teams in crafting collective masterpieces. Your role harnesses the power of collaboration to fuse creative minds into groundbreaking digital solutions.";
-  } else if (motivation === 'Analytical Rigor') {
-    recommendedRole = 'Simulation Specialist';
-    roleDescription = "As a Simulation Specialist, you'll use advanced tools like SIMULIA to turn scientific theories into dynamic, virtual experiments. Your analytical prowess will guide you in testing and optimizing innovative designs.";
-  } else if (motivation === 'Efficiency & Order') {
-    recommendedRole = 'Manufacturing Maestro';
-    roleDescription = "In the role of Manufacturing Maestro, you'll streamline complex production processes with DELMIA's digital manufacturing solutions. Precision and efficiency are your trademarks as you turn prototypes into reality.";
-  } else if (motivation === 'Collaboration & Teamwork') {
-    recommendedRole = 'Collaboration Catalyst';
-    roleDescription = "As a Collaboration Catalyst, you bring diverse talents together using ENOVIA's robust collaborative tools. Your ability to unite ideas will drive transformative digital innovation.";
-  } else {
-    recommendedRole = 'Digital Innovator';
-    roleDescription = "Embrace the role of Digital Innovator and explore the full spectrum of the 3DEXPERIENCE ecosystem. Merge design, simulation, manufacturing, and collaboration to create groundbreaking digital experiences.";
+  let candidateRoles = rolesData;
+  if (motivationMapping[motivation]) {
+    candidateRoles = rolesData.filter(role => motivationMapping[motivation].includes(role.category));
   }
+  if (candidateRoles.length === 0) candidateRoles = rolesData;
+
+  // Randomly select one role from the candidate roles
+  const randomIndex = Math.floor(Math.random() * candidateRoles.length);
+  const selectedRole = candidateRoles[randomIndex];
+  const recommendedRole = selectedRole.name;
+  const roleDescription = selectedRole.description;
 
   const narrative = `
     Your journey reveals that you are driven by <strong>${motivation}</strong> and prefer to work as a <strong>${workPreference}</strong>.
@@ -47,7 +46,7 @@ const ResultScreen = ({ selections, onRestart }) => {
           <li><strong>Motivation:</strong> {motivation}</li>
           <li><strong>Work Preference:</strong> {workPreference}</li>
           <li><strong>Challenge:</strong> {challenge}</li>
-          <li><strong>Recommended Role:</strong> {recommendedRole}</li>
+          <li><strong>Recommended Role:</strong> {recommendedRole} ({selectedRole.category})</li>
         </ul>
       </div>
       <p>
