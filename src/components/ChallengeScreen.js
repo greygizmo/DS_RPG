@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ChallengeScreen = ({ onSelectChallenge }) => {
+const ChallengeScreen = ({ onSelectChallenge, onBack }) => {
   return (
     <div className="screen">
       <h2>Select Your Adventure Challenge</h2>
@@ -23,6 +23,7 @@ const ChallengeScreen = ({ onSelectChallenge }) => {
         <h3>Team Strategist</h3>
         <p>Lead collaborative missions where collective genius prevails.</p>
       </div>
+      <button className="back-button" onClick={onBack}>Back</button>
     </div>
   );
 };

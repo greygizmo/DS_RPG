@@ -56,7 +56,7 @@ button:hover {
   border-color: #ffffff;
 }
 
-/* Style for the generic Back button */
+/* A generic back button style */
 .back-button {
   margin-top: 20px;
   font-size: 14px;
@@ -71,4 +71,37 @@ button:hover {
 
 .back-button:hover {
   background: rgba(255, 255, 255, 0.2);
+}
+
+/* --- New styles for the scoring gauge --- */
+.match-gauge {
+  background: #ffffff;
+  border-radius: 4px;
+  overflow: hidden;
+  height: 20px;
+  margin: 10px 0;
+}
+
+.match-bar {
+  height: 100%;
+  width: 0%; /* this will be set inline via React */
+  transition: width 0.5s ease;
+}
+
+.match-bar.low {
+  background: #f44336; /* red for low match */
+}
+
+.match-bar.medium {
+  background: #FFC107; /* amber for medium match */
+}
+
+.match-bar.high {
+  background: #4caf50; /* green for high match */
+}
+
+.match-text {
+  font-size: 0.9em;
+  margin-top: 5px;
+  font-family: 'DassaultItalic', Arial, sans-serif;
 }

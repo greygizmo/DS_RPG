@@ -1,12 +1,10 @@
 import React from 'react';
 
-const MotivationScreen = ({ onSelectMotivation }) => {
+const MotivationScreen = ({ onSelectMotivation, onBack }) => {
   return (
     <div className="screen">
       <h2>Discover Your Inner Drive</h2>
-      <p>
-        Every innovator is fueled by a unique passion. What inspires you the most?
-      </p>
+      <p>Every innovator is fueled by a unique passion. What inspires you the most?</p>
       <div className="option" onClick={() => onSelectMotivation('Creative Expression')}>
         <h3>Creative Expression</h3>
         <p>I am inspired by art, design, and the beauty of innovation.</p>
@@ -23,6 +21,7 @@ const MotivationScreen = ({ onSelectMotivation }) => {
         <h3>Collaboration & Teamwork</h3>
         <p>Great achievements come when creative minds unite.</p>
       </div>
+      <button className="back-button" onClick={onBack}>Back</button>
     </div>
   );
 };

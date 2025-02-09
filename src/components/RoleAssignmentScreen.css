@@ -1,0 +1,68 @@
+/* src/components/RoleAssignmentScreen.css */
+
+/* Preserve DS theme for selectable options */
+.option {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  margin: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid transparent;
+  max-width: 600px;
+  font-family: 'DassaultRegular', Arial, sans-serif;
+}
+
+.option:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Indicate a selected option clearly */
+.option.selected {
+  border-color: #ffffff;
+  box-shadow: 0 0 12px #ffffff;
+}
+
+/* Grid layout to display roles in a more logical, multi-column arrangement */
+.role-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 15px;
+  justify-items: center;
+}
+
+/* Match gauge styling */
+.match-gauge {
+  background: #ffffff;
+  border-radius: 4px;
+  overflow: hidden;
+  height: 20px;
+  margin: 10px 0;
+  width: 100%;
+}
+
+.match-bar {
+  height: 100%;
+  width: 0%;
+  transition: width 0.5s ease;
+}
+
+.match-bar.low {
+  background-color: #f44336;
+}
+
+.match-bar.medium {
+  background-color: #FFC107;
+}
+
+.match-bar.high {
+  background-color: #4caf50;
+}
+
+.match-text {
+  font-size: 0.9em;
+  margin-top: 5px;
+  font-family: 'DassaultItalic', Arial, sans-serif;
+}
